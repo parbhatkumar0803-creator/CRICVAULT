@@ -1,0 +1,411 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F4F1E8;
+    color: #141A18;
+}
+
+/* HEADER */
+
+header {
+    background-color: #141A18;
+    height: 65px;
+    padding: 0 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header span,
+footer span {
+    color: #D7A74D;
+}
+
+header p {
+    display: flex;
+    gap: 25px;
+}
+
+header p a {
+    font-size: 14px;
+}
+
+header p a:hover {
+    color: #D7A74D;
+}
+
+/* HERO */
+
+#hero {
+    background-color: #203B2D;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+
+    padding: 65px 6%;
+    min-height: 500px;
+}
+
+.hero-text h4 {
+    color: #D7A74D;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: clamp(42px, 6vw, 75px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 15px 0;
+    letter-spacing: -2px;
+}
+
+.hero-text p {
+    color: #C5CFBE;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 450px;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background-color: #326B4E;
+    color: white;
+
+    padding: 14px 25px;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #24543B;
+    transform: translateY(-2px);
+}
+
+/* CHECKERBOARD */
+
+.checker {
+    height: 14px;
+
+    background: conic-gradient(
+        #326B4E 25%,
+        #F4F1E8 0 50%,
+        #326B4E 0 75%,
+        #F4F1E8 0
+    ) 0 0 / 32px 28px;
+}
+
+/* CATEGORY SECTION */
+
+.categories {
+    padding: 55px 5%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h4 {
+    color: #326B4E;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.section-heading a {
+    color: #326B4E;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* PRODUCT CARDS */
+
+.Products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #DDE2D8;
+    border-radius: 12px;
+
+    padding: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(20, 26, 24, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+
+    background-color: #F4F1E8;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #141A18;
+    font-size: 19px;
+    margin: 20px 0 5px;
+}
+
+.product-card p {
+    color: #647267;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-card .btn {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* WHY CRICVAULT */
+
+.why-us {
+    background-color: #E5E9DF;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.why-us h4 {
+    color: #326B4E;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.why-us h2 {
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.why-us > p {
+    color: #56645A;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #F4F1E8;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.feature-card h3 {
+    font-size: 17px;
+    color: #141A18;
+}
+
+.feature-card p {
+    color: #56645A;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* SHOP NOW */
+
+.shop-now {
+    background-color: #141A18;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.shop-now h4 {
+    color: #D7A74D;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.shop-now h2 {
+    font-size: clamp(28px, 4vw, 45px);
+    margin: 15px 0;
+}
+
+.shop-now p {
+    color: #C5CFBE;
+    font-size: 15px;
+}
+
+.shop-now .btn {
+    margin-top: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #141A18;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer hr {
+    border: none;
+    background-color: #326B4E;
+    height: 2px;
+    width: 90%;
+}
+
+footer h2 {
+    font-size: 23px;
+}
+
+footer p {
+    color: #C5CFBE;
+    font-size: 13px;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 25px;
+        margin: 10px 0;
+    }
+
+    header p {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #hero {
+        grid-template-columns: 1fr;
+        padding: 45px 5%;
+        gap: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .Products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-image img {
+        height: 220px;
+    }
+
+    .Products {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .why-us h2 {
+        font-size: 27px;
+    }
+
+    .categories {
+        padding: 35px 5%;
+    }
+}
